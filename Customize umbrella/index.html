@@ -1,0 +1,54 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Umbrella Customizer</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="customizer">
+      <div class="umbrella">
+        <img
+          src="images/Blue-Umbrella.png"
+          alt="Umbrella"
+          id="umbrella-image"
+        />
+        <img src="" id="logo-image" style="display: none" />
+      </div>
+
+      <div class="controls">
+        <h1>Custom Umbrella</h1>
+
+        <div class="swatches">
+          <div class="color-swatch pink" data-color="pink"></div>
+          <div class="color-swatch blue active" data-color="blue"></div>
+          <div class="color-swatch yellow" data-color="yellow"></div>
+        </div>
+
+        <h3>Customize Your Umbrella</h3>
+        <h5>Upload a logo for instant preview</h5>
+        <h6>.png and .jpg files only. Max file size is 5MB.</h6>
+
+        <div class="upload-btn">
+          <label for="logo-upload">Choose Logo</label>
+          <input
+            type="file"
+            id="logo-upload"
+            accept="image/*"
+            onchange="uploadLogo(event)"
+          />
+          <button
+            class="remove-logo"
+            onclick="removeLogo()"
+            title="Remove logo"
+          >
+            ✕
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

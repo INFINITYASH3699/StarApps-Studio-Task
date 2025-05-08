@@ -1,0 +1,141 @@
+* {
+  font-family: sans-serif;
+  box-sizing: border-box;
+}
+:root {
+  --bg: lightblue;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg);
+}
+
+.customizer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem;
+}
+
+.umbrella {
+  position: relative;
+  width: 40rem;
+  max-width: 90vw;
+  margin: 2rem;
+  height: 40rem;
+}
+
+
+#umbrella-image {
+  width: 100%;
+  display: block;
+  transition: opacity 0.3s ease;
+}
+
+#logo-image {
+  position: absolute;
+  top: 78%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.9;
+  width: 20%;
+  max-width: 50px;
+  pointer-events: none;
+  display: none;
+}
+
+.controls {
+  max-width: 400px;
+  padding: 1rem;
+}
+
+.swatches {
+  display: flex;
+  margin: 1rem 0;
+}
+
+.color-swatch {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 8px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease;
+}
+
+.color-swatch.active {
+  border-color: #000;
+  transform: scale(1.1);
+}
+
+.color-swatch.pink {
+  background-color: #ff82a9;
+}
+
+.color-swatch.blue {
+  background-color: #82a9ff;
+}
+
+.color-swatch.yellow {
+  background-color: #f3d450;
+}
+
+.upload-btn {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 1rem 0;
+  background-color: #000;
+  color: #fff;
+  padding: 0.7rem 1rem;
+  border-radius: 5px;
+}
+
+.upload-btn label {
+  cursor: pointer;
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.remove-logo {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.Loader {
+  animation: spin 1s linear infinite;
+  width: 50px;
+  display: block;
+  position: absolute;
+  top: 35%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+
+@keyframes spin {
+  0% {
+    transform: rotate(0);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@media (max-width: 768px) {
+  .customizer {
+    flex-direction: column;
+  }
+
+  .controls {
+    width: 100%;
+  }
+}
